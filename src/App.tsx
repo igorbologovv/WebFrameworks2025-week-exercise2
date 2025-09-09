@@ -1,12 +1,17 @@
-import './App.css'
+import CourseList from "./CourseList";
+import { Course } from "./CourseTypes";
+import './App.css';
 
-function App() {
+type AppProps = {
+  courses: Course[];
+};
 
+function App({ courses }: AppProps) {
   return (
-    <>
-      <div>Week exercise 2 - Read README.md for instructions</div>
-    </>
-  )
+    <div className="main">
+      <CourseList courses={courses} />
+    </div>
+  );
 }
 
-export default App
+export default App;
